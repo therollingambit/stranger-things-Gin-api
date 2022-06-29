@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"stranger-things-gin/configs"
 	"stranger-things-gin/routes"
 
@@ -16,5 +17,5 @@ func main() {
 	// routes
 	routes.CharacterRoute(router)
 
-	router.Run("localhost:6000")
+	router.Run(os.Getenv("APIURL"))
 }
