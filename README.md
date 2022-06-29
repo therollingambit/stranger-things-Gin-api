@@ -16,3 +16,10 @@
 - models: data and database logics
 - responses: files describing the response we want our API to give
 - routes: URL pattern and handler information# stranger-things-Gin-api
+
+### deployment
+- run `go build -o bin/stranger-things-gin -v .`
+- create Procfile to deploy to Heroku
+- run `heroku local` to test endpoints locally
+- run `heroku create appName`
+- 
