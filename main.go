@@ -17,6 +17,7 @@ func main() {
 	// routes
 	routes.CharacterRoute(router)
 
-	port := os.Getenv("PORT")
-	router.Run(":" + port)
+	// port := os.Getenv("PORT")
+	apiUrl := os.Getenv("APIURL")
+	router.Run(apiUrl)
 }
