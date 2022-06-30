@@ -21,5 +21,4 @@
 - run `go build -o bin/stranger-things-gin -v .`
 - create Procfile to deploy to Heroku
 - run `heroku local` to test endpoints locally
-- run `heroku create appName`
-- 
+- in Heroku, set `MONGOURI` and `APP_ENV=production` in config vars

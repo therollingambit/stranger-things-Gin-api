@@ -7,9 +7,10 @@ import (
 )
 
 func CharacterRoute(router *gin.Engine) {
-	router.GET("/characters", controllers.GetAllCharacters())
-	router.GET("/character/:characterId", controllers.GetCharacter())
-	router.POST("/character", controllers.CreateCharacter())
-	router.PUT("/character/:characterId", controllers.EditCharacter())
-	router.DELETE("/character/:characterId", controllers.DeleteCharacter())
+	r := router.Group("/api")
+	r.GET("/characters", controllers.GetAllCharacters())
+	r.GET("/character/:characterId", controllers.GetCharacter())
+	r.POST("/character", controllers.CreateCharacter())
+	r.PUT("/character/:characterId", controllers.EditCharacter())
+	r.DELETE("/character/:characterId", controllers.DeleteCharacter())
 }
