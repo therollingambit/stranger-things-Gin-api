@@ -1,1 +1,1 @@
-web: stranger-things-Gin-api
+web: bin/stranger-things-gin
