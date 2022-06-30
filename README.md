@@ -4,18 +4,18 @@
 - MVC pattern
 
 ### endpoints
-- GET /characters
-- GET /character/:characterId
-- POST /character
-- PUT /character/:characterId
-- DELETE /character/:characterId
+- `GET` /characters
+- `GET` /character/:characterId
+- `POST` /character
+- `PUT` /character/:characterId
+- `DELETE` /character/:characterId
 
 ### project structure
-- configs: project configuration files
-- controllers: application logics
-- models: data and database logics
-- responses: files describing the response we want our API to give
-- routes: URL pattern and handler information# stranger-things-Gin-api
+- `configs`: project configuration files
+- `controllers`: application logics
+- `models`: data and database logics
+- `responses`: files describing the response we want our API to give
+- `routes`: URL pattern and handler information
 
 ### deployment
 - run `go build -o bin/stranger-things-gin -v .`
