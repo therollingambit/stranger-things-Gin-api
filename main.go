@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 	"stranger-things-gin/configs"
 	"stranger-things-gin/routes"
 
@@ -13,16 +14,17 @@ import (
 func main() {
 	router := gin.Default()
 
-	// health check
-	router.GET("/", func(c *gin.Context) {
-    c.JSON(http.StatusOK, gin.H{"data": "hello world"})
-  })
-
 	// run db
 	configs.ConnectDB()
+
+	// health check
+	router.GET("/", func(c *gin.Context) {
+    c.JSON(http.StatusOK, gin.H{"data": "hello world",})
+  })
 
 	// routes
 	routes.CharacterRoute(router)
 
-	router.Run()
+	port := os.Getenv("PORT")
+	router.Run(":" + port)
 }
